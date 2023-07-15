@@ -14,18 +14,45 @@ async function main(){
         countValue++;
         countContainer.textContent = countValue;
         // console.log(countValue);
+        fetch('http://localhost:9001/counter', {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                value: countValue
+            })
+        })
     }
 
     function decrement(){
         countValue--;
         countContainer.textContent = countValue;
         // console.log(countValue);
+        fetch('http://localhost:9001/counter', {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                value: countValue
+            })
+        })
     }
 
     function refresh(){
         const countValue = result.value;
-        countContainer.textContent =countValue;
+        countContainer.textContent = countValue;
         // console.log('Counter has been reset to ' + countValue + '.')
+        fetch('http://localhost:9001/counter', {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                value: countValue
+            })
+        })
     }
 
     incrementButton.addEventListener('click', increment);
