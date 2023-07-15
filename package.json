@@ -1,16 +1,4 @@
 {
-  "name": "5.7.1-activity",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "node server",
-    "inspect-ip": "node inspectIP"
-  },
-  "author": "",
-  "license": "",
-  "dependencies": {
-    "json-server": "^0.16.3",
-    "live-server": "^1.2.1"
-  }
+  "name": "JS-Building-a-Shared-Counter-Part-1",
+  "packageManager": "yarn@3.6.1"
 }
